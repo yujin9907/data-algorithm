@@ -3,13 +3,13 @@ package d7;
 import java.util.Arrays;
 
 public class MyArrayList0 implements MyList {
-
+    final int INITIAL_CAPACITY = 5; // final = 불변
     int[] array; // 저장공간 크기
     int capacity; // 전체 공간의 크기
     int size; // 현재 element 의 크기
 
-    public MyArrayList0(int n) {
-        capacity = n;
+    public MyArrayList0() {
+        capacity = INITIAL_CAPACITY;
         array = new int[capacity];
         size = 0;
     }
@@ -31,9 +31,10 @@ public class MyArrayList0 implements MyList {
 
     @Override
     public void add(Object value) {
-        if (!isFull()) {
-            array[size++] = (int) value;
+        if (isFull()) {
+            grow();
         }
+        array[size++] = (int) value;
     }
 
     private boolean isFull() {
@@ -43,17 +44,27 @@ public class MyArrayList0 implements MyList {
     @Override
     public void add(int index, Object value) {
         if (checkIndexRange(index)) {
-            if (!isFull()) {
-                for(int i=size-1; i>=index; i--) {
-                    array[i+1] = array[i]; // 밀어주기
-                }
-                System.arraycopy(array, index, array, index+1, size-index);
-                array[index] = (int) value;
-                size++;
+            if (isFull()) {
+                grow();
             }
+
+            System.arraycopy(array, index, array, index+1, size-index);
+            array[index] = (int) value;
+            size++;
+
         } else if (index==size) {
             add(value);
         }
+    }
+
+    // 배열 크기 늘리기 (array 라이브러리 내에서도 해당 메서드명으로 이와 같이 구현됨)
+    private void grow() {
+        int[] tempArray = new int[capacity*2];
+        for (int i=0; i<capacity; i++) {
+            tempArray[i] = array[i];
+        }
+        array = tempArray;
+        capacity *= 2;
     }
 
     private boolean checkIndexRange(int index) {
@@ -148,6 +159,7 @@ public class MyArrayList0 implements MyList {
     public void showList() {
         System.out.print("Current List Status : ");
         System.out.println(toString());
+        System.out.println(">>> Current Capacity = " + capacity + "         Size = "+size);
     }
 
     public static void main(String[] args) {
@@ -157,10 +169,14 @@ public class MyArrayList0 implements MyList {
                 50,  61,  277,  167,  81,  24,  76,  186,  78,  101,
                 301,  62,  152,  219,  294};
 
-        MyArrayList0 list = new MyArrayList0(20);
+        MyArrayList0 list = new MyArrayList0();
 
-        for (int i=0;i<10; i++)
+        for (int i=0;i<4; i++)
             list.add(data[i]);  // cf :  list[i]=data[i]
+        list.showList();
+
+        for (int i=4;i<10; i++)
+            list.add(data[i]);  // initial_capacity 확인하려고 위아래 두단계로 나눔
         list.showList();
 
         // get & set
