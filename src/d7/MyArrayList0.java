@@ -111,6 +111,7 @@ public class MyArrayList0 implements MyList {
     @Override
     public Object remove(int index) {
         if (checkIndexRange(index)) {
+            int returnValue = array[index];
 //            for (int i=index+1; i<size; i++) {
 //                array[i-1] = array[i];
 //                size--;
@@ -119,9 +120,9 @@ public class MyArrayList0 implements MyList {
             // 위와 같은 로직
             System.arraycopy(array, index+1, array, index, size-index-1);
             size--;
-            return true;
+            return returnValue;
         }
-        return false;
+        return -999; // 에러코드
     }
 
     @Override
