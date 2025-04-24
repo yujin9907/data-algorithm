@@ -4,20 +4,22 @@ import lib.MyStack;
 
 /*
 MyArrayList2 활용
+
+자바의 접근제어자는 private protected, defualt, public 이 있다.... (디폴트는 같은 패키지 내에서 접근 가능한 접근제어자다)
  */
 public class NewStack1<T> {
 
     MyArrayList2<T> stack;
 
     public NewStack1() {
-
+        stack = new MyArrayList2<>();
     }
 
     public void push (T value) {
         stack.add(value);
     }
     public T pop() {
-        return stack.remove(stack.size -1 );
+        return stack.remove(stack.size() -1 );
     }
     public T peak() {
         return stack.get(stack.size-1);
