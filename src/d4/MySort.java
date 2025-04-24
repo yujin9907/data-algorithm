@@ -1,5 +1,6 @@
 package d4;
 
+// 삽입 버블
 public class MySort {
 
 
@@ -38,22 +39,27 @@ public class MySort {
           int[] toBeSorted = data; // 얕은 복사
          */
 
-        int[] toBeSorted = data.clone(); // 깊은 복사
         MySort ms = new MySort();
 
         System.out.println("------------------");
-        ms.selectionSort(toBeSorted);
+        int[] toBeSorted = data.clone(); // 깊은 복사
+        ms.selectionSort2(toBeSorted, toBeSorted.length-1);
         showData(toBeSorted);
 
         System.out.println("2------------------");
         toBeSorted = data.clone(); // 깊은 복사
         ms.insertionSort(toBeSorted);
         showData(toBeSorted);
+
+        System.out.println("3------------------");
+        toBeSorted = data.clone(); // 깊은 복사
+        ms.bubbleSort(toBeSorted);
+        showData(ms.bubbleSort(toBeSorted));
     }
 
-    // 선택정렬
-    // arg 위치와 return address 메모리에 올림. 즉, 참조값을 직접 변경하게 되므로 void 도 되고... 의미를 명확히하기 위해 int[] 로 함
+    // 선택정렬 반복
     public int[] selectionSort(int[] data) {
+        // arg 위치와 return address 메모리에 올림. 즉, 참조값을 직접 변경하게 되므로 void 도 되고... 의미를 명확히하기 위해 int[] 로 함
         int n = data.length;
 
         for(int i=n-1; i>0; i--) {
@@ -75,7 +81,7 @@ public class MySort {
         }
 
         int maxIndex = n;
-        for (int j=0; j<n-1; j++) {
+        for (int j=0; j<n; j++) {
             if (data[j]>data[maxIndex]) {
                 maxIndex = j;
             }
@@ -85,8 +91,8 @@ public class MySort {
         return selectionSort2(data, n-1);
     }
 
-    // 삽입정렬
-    // 재귀가 성능이 ㄱㅊ은가? 안 괜찮다 피보처럼 부분 완성 -> 다시 정ㅇ렬 이렇게 돼서
+    // 삽입정렬 반복
+    // 삽입정렬 재귀는 피보처럼 부분 완성의 중복이 많아서 성능 문제
     public int[] insertionSort(int[] data) {
         int n = data.length;
 
@@ -114,7 +120,7 @@ public class MySort {
         int n = data.length;
 
         for (int i=n-1; i>=0 ; i--) {
-            for (int j=0; j<=i-1; i++) {
+            for (int j=0; j<=i-1; j++) {
                 if (data[j] > data[j+1]) {
                     swap(data, j, j+1);
                 }

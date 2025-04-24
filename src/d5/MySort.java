@@ -1,7 +1,37 @@
 package d5;
 
-// d4 와 같은 파일
+// 퀵, 머지
 public class MySort {
+
+
+    public static void main(String[] args) {
+        int [] data = {113,  336,  74,  71,  86,  176,  313,  80,  225,  342,
+                170,  292,  275,  266 , 79,  16,  109,  175 , 245,  156,
+                50,  61,  277,  167,  81,  24,  76,  186,  78,  101,
+                301,  62,  152,  219,  294};
+
+        System.out.println("\n< Initial Data >");
+        showData(data);
+
+// deep copy data to another array, dataSorted, for argument...
+// call each sort method
+// showData(dataSorted)
+//
+        MySort ms = new MySort();
+        int [] dataSorted = new int[data.length];
+
+        System.out.println("\n< Quick Sort >");
+        dataSorted=data.clone(); // 깊은 복사
+//		ms.quickSort(dataSorted, 0, data.length); // 리컬전 호출 시, 다만 구현 내부를 알아야 하기 때문에 좋지 않은 방법
+        ms.quickSort(dataSorted);
+        showData(dataSorted);
+
+        System.out.println("\n< Merge Sort >");
+        dataSorted=data.clone(); // 깊은 복사
+        ms.mergeSort(dataSorted);
+        showData(dataSorted);
+
+    }
 
     // 퀵 정렬
     public int[] quickSort(int[] data) { // 앞 인덱스 끝 인덱스가 없어서 리컬시브하게 적용하기 힘듦
@@ -108,35 +138,6 @@ public class MySort {
         }
 
         return data;
-    }
-
-    public static void main(String[] args) {
-        int [] data = {113,  336,  74,  71,  86,  176,  313,  80,  225,  342,
-                170,  292,  275,  266 , 79,  16,  109,  175 , 245,  156,
-                50,  61,  277,  167,  81,  24,  76,  186,  78,  101,
-                301,  62,  152,  219,  294};
-
-        System.out.println("\n< Initial Data >");
-        showData(data);
-
-// deep copy data to another array, dataSorted, for argument...
-// call each sort method
-// showData(dataSorted)
-//
-		MySort ms = new MySort();
-		int [] dataSorted = new int[data.length];
-
-		System.out.println("\n< Quick Sort >");
-		dataSorted=data.clone(); // 깊은 복사
-//		ms.quickSort(dataSorted, 0, data.length); // 리컬전 호출 시, 다만 구현 내부를 알아야 하기 때문에 좋지 않은 방법
-		ms.quickSort(dataSorted);
-		showData(dataSorted);
-
-        System.out.println("\n< Merge Sort >");
-        dataSorted=data.clone(); // 깊은 복사
-        ms.mergeSort(dataSorted);
-        showData(dataSorted);
-
     }
 
     private static void showData(int[] data) {

@@ -96,8 +96,7 @@ public class Maze {
 
         for (int i = 0; i < m.length; i++) {
             for (int j = 0; j < m.length; j++) {
-                System.out.printf(m[i][j] + " ");
-//                System.out.printf("%5d", m[i][j]); // 포맷
+                System.out.printf("%5d", m[i][j]); // 포맷
             }
             System.out.println("\n");
         }
@@ -124,14 +123,15 @@ public class Maze {
         };
 
         Maze me = new Maze(maze);
+        // 반복
         me.resetCount();
         System.out.println("MaxSum = " + me.findMaxIter(maze.length - 1, maze.length - 1));
         System.out.println("Count = " + me.getCount());
+        // 재귀
         me.resetCount();
         System.out.println("MaxSum = " + me.findMaxRec(maze.length - 1, maze.length - 1));
         System.out.println("Count = " + me.getCount());
-
-        // 성능을 고려하여 다이나믹
+        // 재귀+메모 : 성능을 고려하여 다이나믹
         me.resetCount();
         System.out.println("MaxSum = " + me.findMaxRecMemo(maze.length - 1, maze.length - 1));
         System.out.println("Count = " + me.getCount());

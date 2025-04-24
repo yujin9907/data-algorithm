@@ -1,27 +1,27 @@
 package d2;
 
-import java.util.Arrays;
-
+// 순차 검색, 이진(바이너리) 검색
 public class Search {
 
     public static void main(String[] args) {
-        int[] data = {10, 45, 40, 20, 15, 25, 5, 30, 35, 55};
-        int[] sData = {5, 0, 15, 20, 25, 30, 35, 40, 45, 50, 55};
+        int[] data = {10, 45, 40, 20, 15, 25, 5, 30, 35, 55}; // 안정렬데이터
+        int[] sData = {5, 0, 15, 20, 25, 30, 35, 40, 45, 50, 55}; // 정렬데이터
 
         Search s = new Search();
-        System.out.println(s.seqSortedS(sData, 27));
-        System.out.println(s.seqS(data, 25));
-        System.out.println(s.binS(sData, 27, 0, (sData.length - 1)));
-        System.out.println(s.binSIteration(sData, 27, 0, (sData.length - 1)));
-
-        // 3.21
-        System.out.println(s.seqSRec(data, data.length, 25));
+        // 순차
+        System.out.println(s.seqS(data, 25)); // 정렬 X
+        System.out.println(s.seqSortedS(sData, 25)); // 정렬 O
+        System.out.println(s.seqSRec(data, data.length, 25)); // 재귀
         System.out.println(s.seqSRec(data, data.length-1, 25));
+        // 이진
+        System.out.println(s.binS(sData, 25, 0, (sData.length - 1)));
+        System.out.println(s.binSIteration(sData, 25, 0, (sData.length - 1)));
+
     }
 
 
 
-    // 순차검색
+    // 순차검색 : avg, worst = O(N), best = O(1)
     public int seqS(int[] d, int key) {
         /* ver1
         for (int i=0; i<d.length; i++) {
@@ -71,7 +71,19 @@ public class Search {
         return -1;
     }
 
-    // 이진검색 재귀
+    // 순차검색 재귀
+    public int seqSRec(int[] d, int n, int key) {
+        if (n==0) {
+            return -1;
+        } else if (d[n-1]==key) {
+            return n-1;
+        } else {
+            return seqSRec(d, n-1, key);
+        }
+//         Arrays.binarySearch(); // 자바의 바이너리 서치 라이브러리 있다고 설명하심
+    }
+
+    // 이진검색 재귀 : best = O(1), worst, avg = O(n)
     public int binS(int[] d, int key, int start, int end) { // 데이터, 찾을값, 인덱스시작, 인덱스끝
         // valid
         if (start > end) return -1;
@@ -106,16 +118,4 @@ public class Search {
         return -1;
     }
 
-    // Sequential Search 0321
-    public int seqSRec(int[] d, int n, int key) {
-        if (n==0) {
-            return -1;
-        } else if (d[n-1]==key) {
-            return n-1;
-        } else {
-            return seqSRec(d, n-1, key);
-        }
-
-//         Arrays.binarySearch(); // 자바의 바이너리 서치 라이브러리 있다고 설명하심
-    }
 }
