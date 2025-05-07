@@ -5,7 +5,7 @@ public class MyLikedList0 {
 
     class Node {
         int data;
-//        Node prev; // 더블리스트인 경우?? 먼데 이게
+//        Node prev; // TODO 더블리스트인 경우
         Node next;
 
         public Node(int d) {
@@ -29,7 +29,6 @@ public class MyLikedList0 {
     }
 
     public void add(int value) {
-        addFirst(value);
         addLast(value);
     }
 
@@ -52,15 +51,14 @@ public class MyLikedList0 {
     }
 
     public int indexOf(int value) {
-        int index = -1;
+        int index = 0;
         Node p = head;
-        while (p!=null) {
+        while (p != null) {
             if (p.data == value) {
-                return ++index;
-            } else {
-                index++;
-                p=p.next;
+                return index;
             }
+            index++;
+            p = p.next;
         }
         return -1;
     }
@@ -69,6 +67,7 @@ public class MyLikedList0 {
         if (checkIndexRange(index)) {
             if (index == 0) {
                 addFirst(value);
+                return;
             }
 
             Node newNode = new Node(value);
@@ -133,8 +132,10 @@ public class MyLikedList0 {
 
         MyLikedList0 list = new MyLikedList0();
 
-        for (int i=0;i<10; i++)
+        for (int i=0;i<10; i++) {
             list.add(data[i]);  // cf :  list[i]=data[i]
+        }
+
         list.showList();
 //
 //        for (int i=4;i<10; i++)
