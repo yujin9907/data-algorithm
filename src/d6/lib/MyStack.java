@@ -1,4 +1,4 @@
-package lib;
+package d6.lib;
 
 
 public class MyStack<T> {

@@ -1,7 +1,5 @@
 package d7;
 
-import lib.MyStack;
-
 /*
 MyArrayList2 활용
 

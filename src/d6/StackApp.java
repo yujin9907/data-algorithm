@@ -1,6 +1,6 @@
 package d6;
 
-import lib.MyStack;
+import d6.lib.MyStack;
 
 public class StackApp {
 
