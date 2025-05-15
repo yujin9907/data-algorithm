@@ -16,7 +16,7 @@ public class MyLinkedList1 {
 		}
 
 		public String toString() {
-			return data;
+			return ""+data;
 		}
 	}
 
@@ -25,6 +25,7 @@ public class MyLinkedList1 {
 
 	public MyLinkedList1() {
 		head = null;
+		size = 0;
 	}
 
 	public boolean isEmpty() {
@@ -52,10 +53,8 @@ public class MyLinkedList1 {
 				p=p.next;
 			}
 			p.next = newNode;
+			size++;
 		}
-
-		size++;
-
 	}
 
 	public int indexOf(String value) {
@@ -86,6 +85,7 @@ public class MyLinkedList1 {
 				if (i==index) {
 					newNode.next=p.next;
 					p.next = newNode;
+					size++;
 					return;
 				} else {
 					i++;
@@ -93,7 +93,7 @@ public class MyLinkedList1 {
 				}
 			}
 		}
-		else if (index>=size()) {
+		else if (index==size()) {
 			addLast(value);
 		}
 	}
@@ -131,7 +131,6 @@ public class MyLinkedList1 {
 		while (p != null) {
 			if (i==index) {
 				p.data = value;
-				return;
 			}
 			i++;
 			p=p.next;
@@ -145,26 +144,48 @@ public class MyLinkedList1 {
 			if (index == 0) {
 				ret = removeFirst();
 			} else {
-				int i = 1;
-				Node p = head;
-				Node q = p.next;
-				while (q != null) {
-					if (i == index) {
-						ret = q.data;
-						p.next = q.next;
+				int i=1;
+				Node p=head;
+				while(p.next!=null) {
+					if (i==index) {
+						ret=p.next.data;
+						p.next=p.next.next;
+						size--;
 						break;
 					}
 					i++;
-					p=q;
-					q=q.next;
+					p=p.next;
 				}
-
 			}
 		}
 		return ret;
 	}
 
-	public String remove(Object value) {
+	private String removeLast() {
+		if (!isEmpty()) {
+			if (head.next==null) {
+				return removeFirst();
+			}
+			else {
+				Node p=head;
+				Node q = p.next;
+				while(q!=null) {
+					if (q.next==null) {
+						p.next=null;
+						size--;
+						return q.data;
+					}
+					else {
+						p=q;
+						q=q.next;
+					}
+				}
+			}
+		}
+		return null;
+	}
+
+	public String remove(String value) {
 		if (head != null) {
 			if (head.data.equals(value)) {
 				return removeFirst();
@@ -174,6 +195,7 @@ public class MyLinkedList1 {
 			while (q!=null) {
 				if (q.data.equals(value)) {
 					p.next = q.next;
+					size--;
 					return q.data;
 				}
 				p=q;
@@ -189,13 +211,18 @@ public class MyLinkedList1 {
 		if (head != null) {
 			ret = head.data;
 			head = head.next;
+			size--;
 		}
 
 		return ret;
 	}
 
-	public void remove() {
-
+	public boolean checkIndexRange(int index) {
+		if (index>=0 && index<size()) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	public String toString() {
@@ -206,14 +233,6 @@ public class MyLinkedList1 {
 			p=p.next;
 		}
 		return str;
-	}
-
-	public boolean checkIndexRange(int index) {
-		if (index>=0 && index<size()) {
-			return true;
-		} else {
-			return false;
-		}
 	}
 
 	public void showList() {

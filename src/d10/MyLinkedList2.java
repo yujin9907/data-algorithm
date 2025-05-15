@@ -13,7 +13,7 @@ public class MyLinkedList2<T> {
 		}
 
 		public String toString() {
-			return data.toString();
+			return "" + data.toString();
 		}
 	}
 
@@ -22,6 +22,7 @@ public class MyLinkedList2<T> {
 
 	public MyLinkedList2() {
 		head = null;
+		size=0;
 	}
 
 	public boolean isEmpty() {
@@ -82,12 +83,13 @@ public class MyLinkedList2<T> {
 					newNode.next=p.next;
 					p.next = newNode;
 					return;
-				}
+				} else {
 					i++;
 					p=p.next;
+				}
 			}
 		}
-		else if (index>=size) {
+		else if (index==size) {
 			addLast(value);
 		}
 	}
@@ -146,15 +148,16 @@ public class MyLinkedList2<T> {
 					if (i == index) {
 						ret = q.data;
 						p.next = q.next;
+						size--;
 						break;
 					}
 					i++;
 					p=q;
 					q=q.next;
 				}
-				if (q==null) {
-					ret = p.data;
-				}
+//				if (q==null) {
+//					ret = p.data;
+//				}
 			}
 		}
 		return ret;
@@ -170,6 +173,7 @@ public class MyLinkedList2<T> {
 			while (q!=null) {
 				if (q.data.equals(value)) {
 					p.next = q.next;
+					size--;
 					return q.data;
 				}
 				p=q;
@@ -185,6 +189,7 @@ public class MyLinkedList2<T> {
 		if (head != null) {
 			ret = head.data;
 			head = head.next;
+			size--;
 		}
 
 		return ret;
@@ -240,11 +245,6 @@ public class MyLinkedList2<T> {
 		list.showList();
 
 		System.out.println(list.indexOf(new MyData(2, "lee")));
-
-
-
-
-
 
 		System.out.println(list.remove(0));
 		list.showList();
