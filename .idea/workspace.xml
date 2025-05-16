@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d772c750-9252-4c9c-927a-e574ec1cd9d0" name="Changes" comment="0515 - week10 MyLikedList 작성">
-      <change afterPath="$PROJECT_DIR$/src/d11/SimpleTree.java" afterDir="false" />
+    <list default="true" id="d772c750-9252-4c9c-927a-e574ec1cd9d0" name="Changes" comment="0516 - week11 링크 마무리, 트리">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/d10/MyData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/d10/MyData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/d10/MyLikedList.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,8 +101,17 @@
       <updated>1746757410081</updated>
       <workItem from="1746757411364" duration="1838000" />
       <workItem from="1747354252370" duration="5538000" />
-      <workItem from="1747361228123" duration="2459000" />
+      <workItem from="1747361228123" duration="4000000" />
     </task>
+    <task id="LOCAL-00001" summary="0516 - week10 링크 마무리, 트리">
+      <option name="closed" value="true" />
+      <created>1747368734639</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747368734639</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,7 +130,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="0515 - week10 MyLikedList 작성" />
-    <option name="LAST_COMMIT_MESSAGE" value="0515 - week10 MyLikedList 작성" />
+    <MESSAGE value="0516 - week11 링크 마무리, 트리" />
+    <option name="LAST_COMMIT_MESSAGE" value="0516 - week11 링크 마무리, 트리" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
