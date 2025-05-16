@@ -5,7 +5,7 @@ public class MyData {
     int num;
     String name;
 
-    MyData(int n, String str) {
+    public MyData(int n, String str) {
         num=n;
         name=str;
     }
