@@ -78,9 +78,14 @@ public class SimpleTree {
 		}
 
 		public int getNodeCount() {
-
-
-			return 0;
+			return getNodeCount(root);
+		}
+		private int getNodeCount(Node node) {
+			if (node==null) {
+				return 0;
+			} else {
+				return 1+getNodeCount(node.left)+getNodeCount(node.right);
+			}
 		}
 
 		public int getHeight() {
@@ -96,9 +101,19 @@ public class SimpleTree {
 		}
 
 		public boolean contains(char d) {
+			return contains(root, d);
+		}
 
-
-			return true;
+		private boolean contains(Node node, char d) {
+			if (node == null) {
+				return false;
+			} else {
+				if (node.data==d) {
+					return true;
+				} else {
+					return contains(node.left, d) || contains(node.right, d);
+				}
+			}
 		}
 
 		public static void main(String[] args) {
