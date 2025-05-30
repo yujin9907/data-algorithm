@@ -1,12 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="RunManager">
-    <configuration name="BST" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="d12.BST" />
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="044293be-5a5f-4bd7-a189-af1a835857e0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/d13/BSTBalanceTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/d13/MinHeap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/BTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algoritm-0307.iml" beforeDir="false" afterPath="$PROJECT_DIR$/algoritm-0307.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1/Euclid.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1/Fibo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d10/MyData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d10/MyLinkedList$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d10/MyLinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d10/MyLinkedList1$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d10/MyLinkedList1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d10/MyLinkedList2$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d10/MyLinkedList2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d10/MyScheduler$Task.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d10/MyScheduler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d11/MLNew$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d11/MLNew.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d11/MyData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d11/MyLinkedList$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d11/MyLinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d11/SimpleTree$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d11/SimpleTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d12/BST$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d12/BST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d12/BSTA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d12/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d2/Search.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d3/Maze.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d4/MySort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d5/MySort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d6/MyArrayList0.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d6/MyQueue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d6/MyStack0.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d6/StackApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d6/lib/MyStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d6/syntax/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d6/syntax/Test1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d7/MyArrayList1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d7/MyArrayList2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d7/MyData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d7/MyList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d7/NewStack1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d7/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d9/MyLikedList0$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d9/MyLikedList0.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midExam/Code1$NewQueue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midExam/Code1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midExam/Code1Review$NewQueue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midExam/Code1Review.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midExam/Code2$ScoreCard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midExam/Code2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midExam/Code2Review$ScoreCard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midExam/Code2Review.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midExam/MyArrayList2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/Maze.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/maze_ex.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/d10.zip" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2xnFLKTYtbodm78vFJAH2SYPemG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BSTBalanceTree.executor": "Run",
+    "Application.BTree.executor": "Run",
+    "Application.MinHeap.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/d13" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="d13" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.BTree">
+    <configuration name="BSTBalanceTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="d13.BSTBalanceTree" />
       <module name="algoritm-0307" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="d12.*" />
+          <option name="PATTERN" value="d13.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sample.BTree" />
+      <module name="algoritm-0307" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sample.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MinHeap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="d13.MinHeap" />
+      <module name="algoritm-0307" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="d13.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -16,8 +160,25 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BST" />
+        <item itemvalue="Application.BTree" />
+        <item itemvalue="Application.BSTBalanceTree" />
+        <item itemvalue="Application.MinHeap" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="044293be-5a5f-4bd7-a189-af1a835857e0" name="Changes" comment="" />
+      <created>1748565876568</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1748565876568</updated>
+      <workItem from="1748565877712" duration="5625000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
