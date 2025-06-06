@@ -13,14 +13,20 @@ public class CardSelection {
         return selectNSum(0, card.length-1);
     }
 
-    public int selectNSum(int i, int j) { // int index, int length
+    private int selectNSum(int i, int j) { // int index, int length
         // base condition check : 값이 두 개 남은 상태
         if (i+1==j) {
+            return Math.max(card[i], card[j]);
         }
-        return -1;
+
+        // TODO ?
+        return Math.max(card[i] + Math.min(selectNSum(i+2, j), selectNSum(i+1, j-1)),
+                card[j] + Math.min(selectNSum(i+1, j-1), selectNSum(i, j-2))) ;
     }
 
     public static void main(String[] args) {
         int[] d = {11, 21, 3, 4, 5, 9, 8, 7, 6, 10}; // 반드시 짝수개
+        CardSelection c = new CardSelection(d);
+        System.out.println("MaxSum = "+c.selectNSum());
     }
 }
