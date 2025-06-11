@@ -11,3 +11,13 @@
 - ( 는 n개 = openCount
 - ) 는 ( 의 개수만큼 = closeCount
 - total 개수 = 2n 이면 
+
+# 4. N Queens
+- N개의 퀸을 다른 퀸의 공격 범위에 속하지 않는 경우의 수 찾기
+- 상태공간트리
+- backtracking (depth first search & trial and error)
+
+### 상태공간트리
+![img.png](img.png)
+### 알고리즘 설계
+![img_1.png](img_1.png)
