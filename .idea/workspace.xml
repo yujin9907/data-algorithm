@@ -4,13 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="044293be-5a5f-4bd7-a189-af1a835857e0" name="Changes" comment="0605 - 14주차-3">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/d14/NQueens.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/d14/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/d14/img_1.png" afterDir="false" />
+    <list default="true" id="044293be-5a5f-4bd7-a189-af1a835857e0" name="Changes" comment="0605 - 14주차-4 정리">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/d10/MyDoubleLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalExamStudy/ListMinHeap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalExamStudy/MaxHeap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalExamStudy/STUDY.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/AMonthScheduler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/BinarySearchTreeExam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/HeapInList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/d14/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/d14/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/d10/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/d10/MyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/d10/MyLinkedList1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/d10/MyStringLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/d10/MyLinkedList2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/d10/MyScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/d10/MyScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/d11/MLNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/d11/MLNew.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/d11/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/d11/MyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/d12/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/d12/BST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/d13/BSTBalanceTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/d13/BSTBalanceTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/d9/MyLikedList0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/d9/MyIntLikedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,37 +53,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BSTBalanceTree.executor&quot;: &quot;Run&quot;,
-    &quot;Application.BTree.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CardSelection.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MinHeap.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Parenthesis.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Permutation.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BST.executor": "Run",
+    "Application.BSTA.executor": "Run",
+    "Application.BSTBalanceTest.executor": "Run",
+    "Application.BSTBalanceTree.executor": "Run",
+    "Application.BTree.executor": "Run",
+    "Application.CardSelection.executor": "Run",
+    "Application.MinHeap.executor": "Run",
+    "Application.MyLikedList0.executor": "Run",
+    "Application.Parenthesis.executor": "Run",
+    "Application.Permutation.executor": "Run",
+    "Application.SimpleTree.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/sample" />
       <recent name="$PROJECT_DIR$/src/d13_class" />
       <recent name="$PROJECT_DIR$/src/d13" />
     </key>
@@ -79,7 +97,46 @@
       <recent name="d13" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Parenthesis">
+  <component name="RunManager" selected="Application.BSTBalanceTree">
+    <configuration name="BST" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="d12.BST" />
+      <module name="algoritm-0307" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="d12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BSTA" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="d12.BSTA" />
+      <module name="algoritm-0307" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="d12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BSTBalanceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="week13.BSTBalanceTest" />
+      <module name="algoritm-0307" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="week13.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BSTBalanceTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="d13.BSTBalanceTree" />
       <module name="algoritm-0307" />
@@ -93,51 +150,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sample.BTree" />
+    <configuration name="SimpleTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="d11.SimpleTree" />
       <module name="algoritm-0307" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sample.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CardSelection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="d14.CardSelection" />
-      <module name="algoritm-0307" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="d14.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Parenthesis" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="d14.Parenthesis" />
-      <module name="algoritm-0307" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="d14.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Permutation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="d14.Permutation" />
-      <module name="algoritm-0307" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="d14.*" />
+          <option name="PATTERN" value="d11.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Parenthesis" />
-        <item itemvalue="Application.Permutation" />
-        <item itemvalue="Application.CardSelection" />
-        <item itemvalue="Application.BTree" />
         <item itemvalue="Application.BSTBalanceTree" />
+        <item itemvalue="Application.BSTBalanceTest" />
+        <item itemvalue="Application.BST" />
+        <item itemvalue="Application.BSTA" />
+        <item itemvalue="Application.SimpleTree" />
       </list>
     </recent_temporary>
   </component>
@@ -169,6 +187,9 @@
       <workItem from="1749366376376" duration="231000" />
       <workItem from="1749439176537" duration="3547000" />
       <workItem from="1749648418138" duration="78000" />
+      <workItem from="1749648501273" duration="5615000" />
+      <workItem from="1749713895768" duration="752000" />
+      <workItem from="1749714743610" duration="8765000" />
     </task>
     <task id="LOCAL-00001" summary="0530 / heap linkedlist 코드 올려줄테니 구현해봤으면 좋겠다 (도전할 사람만), heap arraylist 는 도전해보라 / BSTBalanceTree 구현 못 함 결과 없음">
       <option name="closed" value="true" />
@@ -218,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749198080459</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="0605 - 14주차-4 정리">
+      <option name="closed" value="true" />
+      <created>1749653619719</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1749653619719</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +270,8 @@
     <MESSAGE value="0605 - 14주차-1" />
     <MESSAGE value="0605 - 14주차-2" />
     <MESSAGE value="0605 - 14주차-3" />
-    <option name="LAST_COMMIT_MESSAGE" value="0605 - 14주차-3" />
+    <MESSAGE value="0605 - 14주차-4 정리" />
+    <option name="LAST_COMMIT_MESSAGE" value="0605 - 14주차-4 정리" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

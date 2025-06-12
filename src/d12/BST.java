@@ -1,8 +1,5 @@
 package d12;
 
-import java.awt.*;
-
-
 // 바이너리 서치 트리
 public class BST {
 
@@ -185,6 +182,7 @@ public class BST {
         t.delete(10);
         System.out.println("\nAfter delete 10 (Not Found) :");
         t.showTree();
+
 
     }
 }

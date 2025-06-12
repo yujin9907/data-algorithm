@@ -1,12 +1,12 @@
 package d9;
 
+// 단일 링크드 리스트(int)
 
-public class MyLikedList0 {
+public class MyIntLikedList {
 
     // private : 구현을 하기 위한 구조체, 사용자는 몰라도 됨
     // equal, <, > : 비즈니스 업무에 의한 로직(라이브러리가 아니라 사용자 영역에서 정의할 것)
     class Node {
-        // Node prev; // TODO 더블리스트인 경우
         Node next;
         int data;
 
@@ -23,7 +23,7 @@ public class MyLikedList0 {
     Node head;
     int size;
 
-    public MyLikedList0() {
+    public MyIntLikedList() {
         head = null;
     }
 
@@ -58,9 +58,7 @@ public class MyLikedList0 {
             }
             p.next = newNode;
         }
-
         size++;
-
     }
 
     public int indexOf(int value) {
@@ -76,7 +74,6 @@ public class MyLikedList0 {
         return -1;
     }
 
-    // TODO 여기도 사이즈 들어가나? 확인
     public void add(int index, int value) {
         if (checkIndexRange(index)) {
             if (index == 0) {
@@ -92,6 +89,7 @@ public class MyLikedList0 {
                 if (i==index) {
                     newNode.next=p.next;
                     p.next = newNode;
+                    size++;
                     return;
                 } else {
                     i++;
@@ -118,6 +116,7 @@ public class MyLikedList0 {
 
     public void clear() {
         head = null;
+        size = 0;
     }
 
     public boolean contains(int value) {
@@ -196,10 +195,6 @@ public class MyLikedList0 {
             }
         }
         return -999;
-//
-//
-//        int index = indexOf((int) value);
-//        return remove(index);
     }
 
     public int removeFirst() {
@@ -247,7 +242,7 @@ public class MyLikedList0 {
                 50,  61,  277,  167,  81,  24,  76,  186,  78,  101,
                 301,  62,  152,  219,  294};
 
-        MyLikedList0 list = new MyLikedList0();
+        MyIntLikedList list = new MyIntLikedList();
 
         for (int i=0;i<10; i++) {
             list.add(data2[i]);  // cf :  list[i]=data[i]

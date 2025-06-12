@@ -62,25 +62,6 @@ public class MLNew<T> {
         }
         size++;
     }
-//
-//    public void add(int index, T value) {
-//        if (checkIndexRange(index) || index == size()) {
-//            if (index == 0) addFirst(value);
-//            else if (index == size()) addLast(value);
-//            else {
-//                MyLikedList.Node newNode = new MyLikedList.Node(value);
-//                MyLikedList.Node p = head;
-//                for (int i = 0; i < index - 1; i++) {
-//                    p = p.next;
-//                }
-//                newNode.next = p;
-//                newNode.prev = p.prev;
-//                p.prev.next = newNode;
-//                p.prev = newNode;
-//                size++;
-//            }
-//        }
-//    }
 
     private int size() {
         return size;
@@ -94,7 +75,6 @@ public class MLNew<T> {
         }
     }
 
-    // 기존 MyLinkedList 와 같음
     private boolean isEmpty() {
         return head == null;
     }
@@ -106,8 +86,6 @@ public class MLNew<T> {
             return false;
         }
     }
-
-
 
     public boolean contains(T value) { // 변화 x
         return (indexOf(value) != -1);

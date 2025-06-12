@@ -31,10 +31,10 @@ public class MyScheduler {
 		}
 	}
 
-	MyLinkedList2<Task> list;
+	MyLinkedList<Task> list;
 
 	public MyScheduler(){
-		list = new MyLinkedList2<>();
+		list = new MyLinkedList<>();
 	}
 	
 	public void register(Task p) {  // add in time-based, ascending order

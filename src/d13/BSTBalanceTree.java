@@ -151,32 +151,53 @@ public class BSTBalanceTree {
     }
 
     public static void main(String[] args) {
-        int[] keys = {4, 7, 5, 1, 0, 3, 9, 2, 6, 8};
-
-
-        BSTBalanceTree t = new BSTBalanceTree();
-
-        for (int i = 0; i < keys.length; i++) {
-            t.insert(keys[i]);
-            t.showTree();
-        }
-
-        System.out.println("\nBefore rotate left:");
-        t.showLevel();
-
-        System.out.println("\nAfter rotate left:");
-        t.rotateLeft();
-        t.showLevel();
-
-        System.out.println("\nAfter rotate left:");
-        t.rotateLeft();
-        t.showLevel();
+//        int[] keys = {4, 7, 5, 1, 0, 3, 9, 2, 6, 8};
+//
+//
+//        BSTBalanceTree t = new BSTBalanceTree();
+//
+//        for (int i = 0; i < keys.length; i++) {
+//            t.insert(keys[i]);
+//            t.showTree();
+//        }
+//
+//        System.out.println("\nBefore rotate left:");
+//        t.showLevel();
+//
+//        System.out.println("\nAfter rotate left:");
+//        t.rotateLeft();
+//        t.showLevel();
+//
+//        System.out.println("\nAfter rotate left:");
+//        t.rotateLeft();
+//        t.showLevel();
 
 //        t.rotateLeft();
 //        t.showLevel();
 //
 //        t.rotateLeft();
 //        t.showLevel();
+
+
+        BSTBalanceTree t = new BSTBalanceTree();
+
+        for (int i=0; i<15;i++) {
+            t.insert(i);
+            t.showTree();
+        }
+
+
+        System.out.println("\nBefore Rotate");
+        t.showLevel();
+
+        t.rotateLeft();
+        t.rotateLeft();
+        t.rotateLeft();
+        t.rotateLeft();
+        t.rotateLeft();
+        System.out.println("\nAfter Rotate");
+        t.showLevel();
+
 
     }
 }

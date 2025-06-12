@@ -1,8 +1,10 @@
-package d11;
+package d10;
 
-// double linked list
-// 변화x 주석 :  MyLinkedList2 복사만 한 것
-public class MyLinkedList<T> {
+// d9.MyLinkedList 에서 double linked list
+// 변화x 주석
+public class MyDoubleLinkedList<T> {
+    // 노드는 유지보수성과 사용자 특성을 배제하기 위해, 클래스를 따로 분리하지 않고 안에다 작성
+    // 즉, 안쪽에 있는 게 맞음 (Node 안에는 의미를 갖는 메서드도 포함하지 않도록 함
     class Node {
         T data;
         Node prev;
@@ -23,10 +25,14 @@ public class MyLinkedList<T> {
     int size;
 
 
-    public MyLinkedList() {
+    public MyDoubleLinkedList() {
         head = null;
         tail = null;
     }
+
+    // addLast() / add First()?
+    // 원래는 앞에 붙이는 게 성능에 제일 좋음으로 MyLiskedList1,2에서는 First 로 했으나, tail 이 추가되며 last 로 해도 됨
+    // 실제 자바 구현체에서도 last 로 구현됨
     public void add(T value) {
         addLast(value);
     }
@@ -42,11 +48,6 @@ public class MyLinkedList<T> {
         }
         size++;
     }
-
-    private boolean isEmpty() {
-        return head==null;
-    }
-
     private void addLast(T value) {
         Node newNode = new Node(value);
         if (isEmpty()) {
@@ -59,6 +60,11 @@ public class MyLinkedList<T> {
         }
         size++;
     }
+
+    private boolean isEmpty() {
+        return head==null;
+    }
+
 
     public void add(int index, T value) {
         if (checkIndexRange(index) || index == size()) {
@@ -133,7 +139,7 @@ public class MyLinkedList<T> {
             index++;
             p = p.next;
         }
-        return -999;
+        return -1;
     }
 
     public T remove(int index) {
@@ -164,29 +170,52 @@ public class MyLinkedList<T> {
 
     // 5.16 : TODO node 가 1개 일 때 removeFirst, removeLast 고려되어 있지않음
     private T removeFirst() {
+
+
         T ret = null;
-        if (head!=null) {
+// Null 일 때를 고려한 코드
+//        if (head != null) {
+//            ret = head.data;
+//            if (head == tail) {
+//                head = tail = null;
+//            } else {
+//                head = head.next;
+//                head.prev = null;
+//            }
+//            size--;
+//        }
+
+        if (head != null) {
             ret = head.data;
+            head.next.prev = null;
             head = head.next;
-            if (head!=null)
-                head.prev=null;
-            else
-                tail=null;
             size--;
         }
+
         return ret;
     }
     private T removeLast() {
         T ret = null;
-        if (tail!=null) {
+
+        // Null 일 때를 고려한 코드
+//        if (tail != null) {
+//            ret = tail.data;
+//            if (head == tail) {
+//                head = tail = null;
+//            } else {
+//                tail = tail.prev;
+//                tail.next = null;
+//            }
+//            size--;
+//        }
+
+        if (tail != null) {
             ret = tail.data;
+            tail.prev.next = null;
             tail = tail.prev;
-            if (tail!=null)
-                tail.next=null;
-            else
-                head=null;
             size--;
         }
+
         return ret;
     }
 
@@ -201,7 +230,7 @@ public class MyLinkedList<T> {
                 while (p!=null) {
                     if (p.data.equals(value)) {
                         T ret = p.data;
-                        p.next.prev = p.prev;
+                        p.next.prev = p.prev; // 이런 표현들을 이해하고 자유롭게 사용할 수 있어야 한다
                         p.prev.next = p.next;
                         size--;
                         return ret;
@@ -232,7 +261,7 @@ public class MyLinkedList<T> {
         Object [][] data = {{1,"kim"},{2,"lee"},{3,"park"},{4,"choi"},{5,"jung"},
                 {6,"kang"},{7,"cho"},{8,"yoon"},{9,"jang"}};
 
-        MyLinkedList<MyData> list = new MyLinkedList<>();
+        MyDoubleLinkedList<MyData> list = new MyDoubleLinkedList<>();
 
         for (int i=0;i<data.length; i++) {
             list.add(new MyData((int)data[i][0], (String)data[i][1]));
